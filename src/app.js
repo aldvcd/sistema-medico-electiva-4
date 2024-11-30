@@ -4,8 +4,6 @@ import morgan from "morgan";
 const app = express();
 
 // Import routes
-import projectRoutes from "./routes/projects.routes.js";
-import taskRoutes from "./routes/tasks.routes.js";
 import pacientesRoutes from "./routes/pacientesRoutes.js";
 import medicosRoutes from "./routes/medicosRoutes.js"
 import fichaMedica from "./routes/fichaMedicaRoutes.js"
