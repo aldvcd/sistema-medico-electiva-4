@@ -85,8 +85,9 @@ export const loginMedico = async (req, res) => {
 
     const token = jwt.sign({ id: medico.id, usuario: medico.usuario }, 'tu_clave_secreta', { expiresIn: '1h' });
     const success = true;
-    
-    res.status(200).json({ success,token });
+    const medicoId=medico.id
+    const medicoUsuario=medico.usuario
+    res.status(200).json({ success,token,medicoId,medicoUsuario});
   } catch (error) {
     console.error("Error al iniciar sesión:", error);
     res.status(500).json({ success:false,error: 'Error al iniciar sesión' });
